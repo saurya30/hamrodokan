@@ -1,19 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:hamrodokan/utils/theme/theme.dart';
+
+import 'app.dart';
 
 void main() {
   runApp(const App());
-}
-
-//created our class named App
-class App extends StatelessWidget {
-  const App({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp( // material app is starting point of our app
-      themeMode: ThemeMode.system,
-      theme: ThemeData(),
-      darkTheme: ThemeData(),
-    );
-  }
 }
