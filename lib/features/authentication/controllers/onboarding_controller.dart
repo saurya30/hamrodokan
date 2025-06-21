@@ -31,7 +31,12 @@ class OnBoardingController extends GetxController{
 
   ///update current index and jump to the last page
   void skipPage(){
-    currentPageIndex.value = 2;
-    pageController.jumpToPage(2);
+    Get.offAll(LoginScreen());
+  }
+
+  @override
+  void onClose() {
+    pageController.dispose();
+    super.onClose();
   }
 }
