@@ -1,3 +1,5 @@
+import 'dart:collection';
+
 class TTexts{
   ///onboarding texts
   static const String onBoardingTitle1 = "Choose your product";
@@ -11,5 +13,10 @@ class TTexts{
   ///home
   static const String homeAppBarTitle = "Good day for shopping";
   static const String homeAppBarSubTitle = "Jai Nepal";
+
+  ///Login
+  static const String loginTitle = "Welcome back,";
+  static const String loginSubTitle = "Discover Limitless Choices and Unmatched Convenience";
+
 
 }

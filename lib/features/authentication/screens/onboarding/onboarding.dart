@@ -3,10 +3,10 @@ import 'package:get/get.dart';
 import 'package:hamrodokan/features/authentication/controllers/onboarding_controller.dart';
 import 'package:hamrodokan/utils/constants/image_strings.dart';
 import '../../../../utils/constants/text_strings.dart';
-import '../widgets/onboarding_dot_navigation.dart';
-import '../widgets/onboarding_next_button.dart';
-import '../widgets/onboarding_page.dart';
-import '../widgets/onboarding_skip.dart';
+import '../onboarding_widgets/onboarding_dot_navigation.dart';
+import '../onboarding_widgets/onboarding_next_button.dart';
+import '../onboarding_widgets/onboarding_page.dart';
+import '../onboarding_widgets/onboarding_skip.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
