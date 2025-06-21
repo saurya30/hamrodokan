@@ -82,7 +82,7 @@ class LoginForm extends StatelessWidget {
                   TextSpan(
                     text: "Don't have an account? ",
                     style: TextStyle(
-                      color: dark ? Colors.black : Colors.white,
+                      color: dark ? Colors.white : Colors.black,
                     ),
                     children: [
                       TextSpan(

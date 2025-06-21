@@ -4,8 +4,8 @@ class TImages{
   static const String lightAppLogo = "assets/logos/hamrolight.png";
 
   /// social logos
-  static const String google = "assets/logos/google.png";
-  static const String facebook = "assets/logos/facebook.png";
+  static const String google = "assets/icons/google.png";
+  static const String facebook = "assets/icons/facebook.png";
 
   ///onboarding images
   static const String onBoardingImage1 = "assets/images/groceryonboard1.jpg";
