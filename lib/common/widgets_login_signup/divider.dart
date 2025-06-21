@@ -6,9 +6,11 @@ class FormDivider extends StatelessWidget {
   const FormDivider({
     super.key,
     required this.dark,
+    required this.text,
   });
 
   final bool dark;
+  final String text;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +25,7 @@ class FormDivider extends StatelessWidget {
             endIndent: 5,
           ),
         ),
-        Text("OR",style: Theme.of(context).textTheme.labelMedium),
+        Text(text,style: Theme.of(context).textTheme.labelMedium),
         Flexible(
           child: Divider(
             color: dark ? TColors.darkGrey : TColors.grey,

@@ -1,14 +1,13 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:hamrodokan/features/authentication/screens/signup/signup.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../../utils/constants/colors.dart';
 import '../../../../utils/constants/sizes.dart';
 
 class LoginForm extends StatelessWidget {
-  const LoginForm({
-    super.key,
-    required this.dark,
-  });
+  const LoginForm({super.key, required this.dark});
 
   final bool dark;
 
@@ -16,9 +15,7 @@ class LoginForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return Form(
       child: Padding(
-        padding: const EdgeInsets.symmetric(
-          vertical: TSizes.spaceBtwSections,
-        ),
+        padding: const EdgeInsets.symmetric(vertical: TSizes.spaceBtwSections),
         child: Column(
           children: [
             ///Email
@@ -55,10 +52,7 @@ class LoginForm extends StatelessWidget {
                 ),
 
                 ///forgot Password
-                TextButton(
-                  onPressed: () {},
-                  child: Text("Forgot Password?"),
-                ),
+                TextButton(onPressed: () {}, child: Text("Forgot Password?")),
               ],
             ),
 
@@ -67,10 +61,7 @@ class LoginForm extends StatelessWidget {
             ///Sign in button
             SizedBox(
               width: double.infinity,
-              child: ElevatedButton(
-                onPressed: () {},
-                child: Text('Sign in'),
-              ),
+              child: ElevatedButton(onPressed: () {}, child: Text('Sign in')),
             ),
 
             SizedBox(height: TSizes.spaceBtwItems),
@@ -81,11 +72,18 @@ class LoginForm extends StatelessWidget {
                 children: [
                   TextSpan(
                     text: "Don't have an account? ",
-                    style: TextStyle(
-                      color: dark ? Colors.white : Colors.black,
-                    ),
+                    style: TextStyle(color: dark ? Colors.white : Colors.black),
                     children: [
                       TextSpan(
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => SignupScreen(),
+                              ),
+                            );
+                          },
                         text: "Sign up!",
                         style: TextStyle(color: TColors.primary),
                       ),
