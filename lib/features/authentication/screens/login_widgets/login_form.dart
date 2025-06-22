@@ -1,5 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:hamrodokan/features/authentication/screens/password_configuration/forgot_password.dart';
 import 'package:hamrodokan/features/authentication/screens/signup/signup.dart';
 import 'package:iconsax/iconsax.dart';
 
@@ -52,7 +54,10 @@ class LoginForm extends StatelessWidget {
                 ),
 
                 ///forgot Password
-                TextButton(onPressed: () {}, child: Text("Forgot Password?")),
+                TextButton(
+                  onPressed: () => (Get.to(() => ForgotPassword())),
+                  child: Text("Forgot Password?"),
+                ),
               ],
             ),
 

@@ -14,4 +14,5 @@ class TImages{
 
   ///animation images
   static const String emailVerificaton = "assets/images/emailVerification.png";
+  static const String resetPassword = "assets/images/emailVerification.png";
 }

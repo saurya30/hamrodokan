@@ -1,5 +1,3 @@
-import 'dart:collection';
-
 class TTexts{
   ///onboarding texts
   static const String onBoardingTitle1 = "Choose your product";
@@ -22,9 +20,16 @@ class TTexts{
   static const String verifyEmailTitle = "Verify your email address!";
   static const String verifyEmailSubTitle = "Congratulations! Your Account Awaits: Verify your Email to Start Shopping and Experience a World of Unrivaled Deals and Personalized Offers.";
 
-  ///verify email
+  ///success screen
   static const String successScreenTitle = "Your account successfully created!";
   static const String successScreenSubTitle = "Welcome to Your Ultimate Shopping Destination: Your account is created, Unleash the joy of Seamless Online Shopping";
 
+  ///forgot password
+  static const String forgotPasswordTitle = "Forgot Password";
+  static const String forgotPasswordSubTitle = "Don't worry sometimes people can forget too, Enter your email and we will send you a password reset link.";
+
+  ///reset password
+  static const String resetPasswordTitle = "Password Reset Email Sent";
+  static const String resetPasswordSubTitle = "Your account security is our priority! We have sent you a Secure Link to safely change your password and keep your account protected.";
 
 }
