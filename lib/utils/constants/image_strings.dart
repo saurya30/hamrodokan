@@ -11,4 +11,7 @@ class TImages{
   static const String onBoardingImage1 = "assets/images/groceryonboard1.jpg";
   static const String onBoardingImage2 = "assets/images/groceryonboard1.jpg";
   static const String onBoardingImage3 = "assets/images/groceryonboard1.jpg";
+
+  ///animation images
+  static const String emailVerificaton = "assets/images/emailVerification.png";
 }

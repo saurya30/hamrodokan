@@ -18,5 +18,13 @@ class TTexts{
   static const String loginTitle = "Welcome back,";
   static const String loginSubTitle = "Discover Limitless Choices and Unmatched Convenience";
 
+  ///verify email
+  static const String verifyEmailTitle = "Verify your email address!";
+  static const String verifyEmailSubTitle = "Congratulations! Your Account Awaits: Verify your Email to Start Shopping and Experience a World of Unrivaled Deals and Personalized Offers.";
+
+  ///verify email
+  static const String successScreenTitle = "Your account successfully created!";
+  static const String successScreenSubTitle = "Welcome to Your Ultimate Shopping Destination: Your account is created, Unleash the joy of Seamless Online Shopping";
+
 
 }

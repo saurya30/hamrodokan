@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:hamrodokan/common/widgets_login_signup/divider.dart';
-import 'package:hamrodokan/common/widgets_login_signup/social_buttons.dart';
 import 'package:hamrodokan/utils/constants/sizes.dart';
 import 'package:hamrodokan/utils/helpers/helper_functions.dart';
+import '../../../../common/widgets/widgets_login_signup/divider.dart';
+import '../../../../common/widgets/widgets_login_signup/social_buttons.dart';
 import '../signup_widgets/signup_form.dart';
 
 class SignupScreen extends StatelessWidget {

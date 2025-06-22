@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hamrodokan/common/styles/spacing_styles.dart';
 import 'package:hamrodokan/utils/constants/sizes.dart';
 import 'package:hamrodokan/utils/helpers/helper_functions.dart';
-import '../../../../common/widgets_login_signup/divider.dart';
-import '../../../../common/widgets_login_signup/social_buttons.dart';
+import '../../../../common/widgets/widgets_login_signup/divider.dart';
+import '../../../../common/widgets/widgets_login_signup/social_buttons.dart';
 import '../login_widgets/login_form.dart';
 import '../login_widgets/login_header.dart';
 
