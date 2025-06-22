@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hamrodokan/features/authentication/screens/login/login.dart';
 import 'package:hamrodokan/utils/constants/image_strings.dart';
 import 'package:hamrodokan/utils/constants/sizes.dart';
 import 'package:hamrodokan/utils/constants/text_strings.dart';
@@ -17,7 +18,7 @@ class ResetPassword extends StatelessWidget {
         automaticallyImplyLeading: false,
         actions: [
           IconButton(
-            onPressed: ()=> Get.back(),
+            onPressed: () => Get.offAll(()=>LoginScreen()),
             icon: Icon(CupertinoIcons.clear),
           ),
         ],
@@ -53,7 +54,7 @@ class ResetPassword extends StatelessWidget {
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: (){},
+                    onPressed: ()=>Get.to(()=>LoginScreen()),
                     child: Text("Done"),
                   ),
                 ),
@@ -63,7 +64,11 @@ class ResetPassword extends StatelessWidget {
                 SizedBox(
                   width: double.infinity,
                   child: TextButton(
-                    onPressed: (){},
+                    onPressed: (){
+                      ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(content: Text("Reset email sent again. Please check your inbox."))
+                      );
+                    },
                     child: Text("Resend Email"),
                   ),
                 ),
