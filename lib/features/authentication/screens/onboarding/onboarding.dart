@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:hamrodokan/features/authentication/controllers/onboarding_controller.dart';
 import 'package:hamrodokan/utils/constants/image_strings.dart';
 import '../../../../utils/constants/text_strings.dart';
+import '../onboarding_widgets/onboading_slides.dart';
 import '../onboarding_widgets/onboarding_dot_navigation.dart';
 import '../onboarding_widgets/onboarding_next_button.dart';
 import '../onboarding_widgets/onboarding_page.dart';
@@ -19,27 +20,7 @@ class OnboardingScreen extends StatelessWidget {
       body: Stack(
         children: [
           ///horizontal scrollable pages
-          PageView(
-            controller: controller.pageController,
-            onPageChanged: controller.updatePageIndicator,
-            children: [
-              OnBoardingPage(
-                image: TImages.onBoardingImage1,
-                title: TTexts.onBoardingTitle1,
-                subTitle: TTexts.onBoardingSubTitle1,
-              ),
-              OnBoardingPage(
-                image: TImages.onBoardingImage2,
-                title: TTexts.onBoardingTitle2,
-                subTitle: TTexts.onBoardingSubTitle2,
-              ),
-              OnBoardingPage(
-                image: TImages.onBoardingImage3,
-                title: TTexts.onBoardingTitle3,
-                subTitle: TTexts.onBoardingSUbTitle3,
-              ),
-            ],
-          ),
+          onboarding_slide(controller: controller),
 
           ///Skip button
           OnBoardingSkip(),
@@ -54,6 +35,8 @@ class OnboardingScreen extends StatelessWidget {
     );
   }
 }
+
+
 
 
 
