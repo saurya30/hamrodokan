@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hamrodokan/features/authentication/screens/password_configuration/forgot_password.dart';
 import 'package:hamrodokan/features/authentication/screens/signup/signup.dart';
+import 'package:hamrodokan/navigation_menu.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../../utils/constants/colors.dart';
@@ -66,7 +67,7 @@ class LoginForm extends StatelessWidget {
             ///Sign in button
             SizedBox(
               width: double.infinity,
-              child: ElevatedButton(onPressed: () {}, child: Text('Sign in')),
+              child: ElevatedButton(onPressed: () =>Get.to(()=> const NavigationMenu()), child: Text('Sign in')),
             ),
 
             SizedBox(height: TSizes.spaceBtwItems),
