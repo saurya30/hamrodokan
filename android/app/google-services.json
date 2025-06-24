@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "469779211630",
+    "project_id": "hamrodokan-54f97",
+    "storage_bucket": "hamrodokan-54f97.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:469779211630:android:43b5919369bbaa66754d7f",
+        "android_client_info": {
+          "package_name": "com.example.hamrodokan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "469779211630-h2769g5ptr067pcpogcmi2a5hpsn34b5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hamrodokan",
+            "certificate_hash": "b37eb86b4f83a876f3903dd8c981dc2e2aad3795"
+          }
+        },
+        {
+          "client_id": "469779211630-ooq22khkravfomucpko8v902r3rh6nmv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfju9tosxGW2ceK8Tk7t77PUqN3T4JxNQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "469779211630-ooq22khkravfomucpko8v902r3rh6nmv.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "469779211630-gf1e1dvou94o58m3rgpguf309jmi5erj.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.hamrodokan"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
