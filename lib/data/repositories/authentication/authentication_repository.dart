@@ -18,7 +18,7 @@ class AuthenticationRepository extends GetxController {
   }
 
   ///function to show relevant screen
-  screenRedirect() async {
+  Future<void> screenRedirect() async {
     //Local Storage
     deviceStorage.writeIfNull('IsFirstTime', true);
     deviceStorage.read('IsFirstTime') != true
