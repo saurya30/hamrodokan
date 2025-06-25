@@ -15,4 +15,16 @@ class TImages{
   ///animation images
   static const String emailVerificaton = "assets/images/emailVerification.png";
   static const String resetPassword = "assets/images/emailVerification.png";
+
+  ///Categories Icons
+  static const String food = "assets/icons/catetgories/food.png";
+  static const String staple = "assets/icons/catetgories/staple.png";
+  static const String liquors = "assets/icons/catetgories/liquor.png";
+  static const String lifestyle = "assets/icons/catetgories/lifestyle.png";
+  static const String frozen = "assets/icons/catetgories/frozen-goods.png";
+  static const String household = "assets/icons/catetgories/household.png";
+  static const String fresh = "assets/icons/catetgories/fresh.png";
+  static const String dairy = "assets/icons/catetgories/dairy-products.png";
+  static const String essential = "assets/icons/catetgories/essential.png";
+
 }
