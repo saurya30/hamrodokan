@@ -20,7 +20,7 @@ dependencies:
   url_launcher: ^6.1.12
   flutter_native_splash: ^2.3.2
   smooth_page_indicator: ^1.2.1
-
+  carousel_slider: ^5.1.1
   
 #--------ICONS---------#
   iconsax: ^0.0.8

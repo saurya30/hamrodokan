@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:hamrodokan/common/widgets/custom_shapes/curved_edges/curved_edges.dart';
+import 'package:hamrodokan/features/authentication/screens/home/widget/promo_slider.dart';
+import 'package:hamrodokan/utils/constants/image_strings.dart';
+import 'package:hamrodokan/utils/constants/sizes.dart';
 
-import '../../../../../common/widgets/custom_shapes/containers/circular_container.dart';
 import '../../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
-import '../../../../../common/widgets/custom_shapes/curved_edges/curved_edges_widget.dart';
-import '../../../../../utils/constants/colors.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -15,13 +14,20 @@ class HomeScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            TPrimaryHeaderContainer(
-                child: Container(),
-            ),
+            TPrimaryHeaderContainer(child: Container()),
 
+            ///body
+            Padding(
+              padding: const EdgeInsets.all(TSizes.defaultSpace),
+              child: TPromoSlider(banners: [TImages.promoBanner1,TImages.promoBanner2,TImages.promoBanner3,],),
+            ),
           ],
         ),
       ),
     );
   }
 }
+
+
+
+

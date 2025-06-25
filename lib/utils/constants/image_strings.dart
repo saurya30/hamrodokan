@@ -15,4 +15,9 @@ class TImages{
   ///animation images
   static const String emailVerificaton = "assets/images/emailVerification.png";
   static const String resetPassword = "assets/images/emailVerification.png";
+
+  ///banners
+  static const String promoBanner1 = "assets/images/promobanner.webp";
+  static const String promoBanner2 = "assets/images/promobanner.webp";
+  static const String promoBanner3 = "assets/images/promobanner.webp";
 }
