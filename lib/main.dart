@@ -6,9 +6,9 @@ import 'package:get_storage/get_storage.dart';
 
 import 'app.dart';
 import 'data/repositories/authentication/authentication_repository.dart';
-import 'firebase_options.dart';
 
-Future<void> main() async{
+
+Future<void> main(dynamic DefaultFirebaseOptions) async{
   ///widgets binding
   final WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
 
