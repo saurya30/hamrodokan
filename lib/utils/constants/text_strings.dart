@@ -32,4 +32,8 @@ class TTexts{
   static const String resetPasswordTitle = "Password Reset Email Sent";
   static const String resetPasswordSubTitle = "Your account security is our priority! We have sent you a Secure Link to safely change your password and keep your account protected.";
 
+  ///--Home
+static const String homeAppbarTitle="Good day for shopping";
+static const String homeAppbarSubtitle="Taimoor Sikander";
+
 }
