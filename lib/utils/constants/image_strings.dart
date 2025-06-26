@@ -16,12 +16,11 @@ class TImages{
   static const String emailVerificaton = "assets/images/emailVerification.png";
   static const String resetPassword = "assets/images/emailVerification.png";
 
-<<<<<<< HEAD
   ///banners
   static const String promoBanner1 = "assets/images/promobanner.webp";
   static const String promoBanner2 = "assets/images/promobanner.webp";
   static const String promoBanner3 = "assets/images/promobanner.webp";
-=======
+
   ///Categories Icons
   static const String food = "assets/icons/catetgories/food.png";
   static const String staple = "assets/icons/catetgories/staple.png";
@@ -33,5 +32,4 @@ class TImages{
   static const String dairy = "assets/icons/catetgories/dairy-products.png";
   static const String essential = "assets/icons/catetgories/essential.png";
 
->>>>>>> c1c01e815dc444da77d589245a1acea9f9886cb0
 }
