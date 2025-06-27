@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hamrodokan/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:hamrodokan/common/widgets/images/t_rounded_image.dart';
+import 'package:hamrodokan/utils/constants/enums.dart';
 import 'package:hamrodokan/utils/constants/image_strings.dart';
 import 'package:hamrodokan/utils/helpers/helper_functions.dart';
 import 'package:iconsax/iconsax.dart';
@@ -11,6 +12,7 @@ import '../../../styles/shadows.dart';
 import '../../icons/t_circular_icon.dart';
 import '../../texts/product_price_text.dart';
 import '../../texts/product_title_text.dart';
+import '../../texts/t_brand_title_text_with_verified_icon.dart';
 
 class TProductCardVertical extends StatelessWidget {
   const TProductCardVertical({super.key});
@@ -86,37 +88,36 @@ class TProductCardVertical extends StatelessWidget {
                 children: [
                   const TProductTitleText(title: 'Green Nike Air Shoes',smallSize: true,),
                   const SizedBox(height: TSizes.spaceBtwItems/2,),
-                  Row(
-                    children: [
-                      Text('Nike', overflow: TextOverflow.ellipsis,maxLines: 1,style: Theme.of(context).textTheme.labelMedium,),
-                      const SizedBox(width: TSizes.xs,),
-                      const Icon(Iconsax.verify5,color: TColors.primary,size: TSizes.iconXs,),
-                    ],
-                  ),
-
-
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      ///Price
-                      TProductPriceText(price: '35.0',),
-                      Container(
-                        decoration: const BoxDecoration(
-                          color: TColors.dark,
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(TSizes.cardRadiusMd),
-                            bottomRight: Radius.circular(TSizes.productImageRadius),
-                          ),
-                        ),
-                        child: const SizedBox(
-                          width: TSizes.iconLg * 1.2,
-                            height: TSizes.iconLg * 1.2,
-                            child: Center(child: Icon(Iconsax.add, color: TColors.white))),
-                      )
-                    ],
-                  )
+                  TBrandTitleWithVerifiedIcon(title: 'Nike',),
                 ],
               ),
+            ),
+
+            const Spacer(),
+
+            ///Price Row
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                ///Price
+                Padding(
+                  padding: const EdgeInsets.only(left: TSizes.sm),
+                  child: TProductPriceText(price: '35.0',),
+                ),
+                Container(
+                  decoration: const BoxDecoration(
+                    color: TColors.dark,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(TSizes.cardRadiusMd),
+                      bottomRight: Radius.circular(TSizes.productImageRadius),
+                    ),
+                  ),
+                  child: const SizedBox(
+                      width: TSizes.iconLg * 1.2,
+                      height: TSizes.iconLg * 1.2,
+                      child: Center(child: Icon(Iconsax.add, color: TColors.white))),
+                )
+              ],
             ),
           ],
         ),
@@ -124,5 +125,7 @@ class TProductCardVertical extends StatelessWidget {
     );
   }
 }
+
+
 
 

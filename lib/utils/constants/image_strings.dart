@@ -34,5 +34,6 @@ class TImages{
 
   //products
   static const String dairymilkSilk = "assets/products/dairymilksilk.jpg";
+  static const String milk = "assets/products/milk.png";
 
 }
