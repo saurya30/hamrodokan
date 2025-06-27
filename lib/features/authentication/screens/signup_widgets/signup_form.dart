@@ -2,7 +2,6 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hamrodokan/features/authentication/controllers/signup_controller.dart';
-import 'package:hamrodokan/features/authentication/screens/signup/verify_email.dart';
 import 'package:hamrodokan/utils/validators/validation.dart';
 import 'package:iconsax/iconsax.dart';
 

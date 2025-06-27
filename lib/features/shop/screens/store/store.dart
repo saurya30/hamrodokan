@@ -7,12 +7,10 @@ import 'package:hamrodokan/common/widgets/products/cart/cart_menu_icon.dart';
 import 'package:hamrodokan/common/widgets/texts/section_heading.dart';
 import 'package:hamrodokan/features/shop/screens/store/widgets/category_tab.dart';
 import 'package:hamrodokan/utils/constants/colors.dart';
-import 'package:hamrodokan/utils/constants/image_strings.dart';
 import 'package:hamrodokan/utils/constants/sizes.dart';
 import 'package:hamrodokan/utils/helpers/helper_functions.dart';
 
 import '../../../../common/widgets/brands/brand_card.dart';
-import '../../../../common/widgets/brands/brand_show_case.dart';
 
 class StoreScreen extends StatelessWidget {
   const StoreScreen({super.key});

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hamrodokan/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:hamrodokan/common/widgets/images/t_rounded_image.dart';
-import 'package:hamrodokan/utils/constants/enums.dart';
 import 'package:hamrodokan/utils/constants/image_strings.dart';
 import 'package:hamrodokan/utils/helpers/helper_functions.dart';
 import 'package:iconsax/iconsax.dart';
