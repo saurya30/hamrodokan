@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hamrodokan/features/authentication/screens/home/widget/home_appbar.dart';
 import 'package:hamrodokan/features/authentication/screens/home/widget/promo_slider.dart';
 import 'package:hamrodokan/utils/constants/image_strings.dart';
 
@@ -7,8 +8,10 @@ import 'package:hamrodokan/utils/constants/sizes.dart';
 import '../../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
 import '../../../../../common/widgets/custom_shapes/containers/search_container.dart';
 
+import '../../../../../common/widgets/layouts/grid_layout.dart';
+import '../../../../../common/widgets/products/products_cart/product_card_vertical.dart';
 import '../../../../../common/widgets/texts/section_heading.dart';
-import 'home_appbar.dart';
+
 import 'home_categories.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -17,16 +20,16 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
       body: SingleChildScrollView(
         child: Column(
           children: [
+            ///header
             TPrimaryHeaderContainer(
               child: Column(
                 children: [
                   ///AppBar
                   const THomeAppBar(),
-                  const SizedBox(height: TSizes.spaceBtwSections),
+                 const SizedBox(height: TSizes.spaceBtwSections),
 
                   ///SearchBox
                   const TSearchContainer(text: 'Search in Store'),
@@ -46,7 +49,7 @@ class HomeScreen extends StatelessWidget {
                         const SizedBox(height: TSizes.spaceBtwItems),
 
                         ///Categories
-                        THomeCategories(),
+                       const THomeCategories(),
                       ],
                     ),
                   ),
@@ -56,14 +59,22 @@ class HomeScreen extends StatelessWidget {
 
             ///body
             Padding(
-                padding: EdgeInsets.all(TSizes.defaultSpace),
+              padding:const EdgeInsets.all(TSizes.defaultSpace),
+
+              ///promo slider
               child: Column(
                 children: [
+                 const TPromoSlider(
+                    banners: [
+                      TImages.promoBanner1,
+                      TImages.promoBanner2,
+                      TImages.promoBanner3,
+                    ],
+                  ),
+                 const SizedBox(height: TSizes.spaceBtwSections),
 
-                  ///promo slider
-                  TPromoSlider(banners: [TImages.promoBanner1,TImages.promoBanner2,TImages.promoBanner3]),
-
-
+                  ///popular products
+                  TGridLayout(itemCount: 2, itemBuilder: (_ , index )=> TProductCardVertical()),
                 ],
               ),
             ),
@@ -73,3 +84,4 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
