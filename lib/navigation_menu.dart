@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hamrodokan/features/authentication/screens/home/widget/home.dart';
+import 'package:hamrodokan/features/personalization/screens/settings/settings.dart';
 import 'package:hamrodokan/features/shop/screens/store/store.dart';
 import 'package:hamrodokan/features/shop/screens/wishlist/wishlist.dart';
 import 'package:hamrodokan/utils/constants/colors.dart';
@@ -45,6 +46,6 @@ class NavigationController extends GetxController {
     const HomeScreen(),
     const StoreScreen(),
     const FavouriteScreen(),
-    Container(color: Colors.blue),
+    const SettingsScreen(),
   ];
 }
