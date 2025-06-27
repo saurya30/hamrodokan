@@ -40,8 +40,8 @@ class TProductCardVertical extends StatelessWidget {
               child: Stack(
                 children: [
                   ///Thumbnail image yesma product images halne ho
-                  const TRoundedImage(
-                    imageUrl: TImages.promoBanner3,
+                   TRoundedImage(
+                    imageUrl: TImages.dairymilkSilk,
                     applyImageRadius: true,
                   ),
 

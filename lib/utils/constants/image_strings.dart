@@ -22,14 +22,17 @@ class TImages{
   static const String promoBanner3 = "assets/images/promobanner.webp";
 
   ///Categories Icons
-  static const String food = "assets/icons/catetgories/food.png";
-  static const String staple = "assets/icons/catetgories/staple.png";
-  static const String liquors = "assets/icons/catetgories/liquor.png";
-  static const String lifestyle = "assets/icons/catetgories/lifestyle.png";
-  static const String frozen = "assets/icons/catetgories/frozen-goods.png";
-  static const String household = "assets/icons/catetgories/household.png";
-  static const String fresh = "assets/icons/catetgories/fresh.png";
-  static const String dairy = "assets/icons/catetgories/dairy-products.png";
-  static const String essential = "assets/icons/catetgories/essential.png";
+  static const String food = "assets/icons/categories/food.png";
+  static const String staple = "assets/icons/categories/staple.png";
+  static const String liquors = "assets/icons/categories/liquor.png";
+  static const String lifestyle = "assets/icons/categories/lifestyle.png";
+  static const String frozen = "assets/icons/categories/frozen-goods.png";
+  static const String household = "assets/icons/categories/household.png";
+  static const String fresh = "assets/icons/categories/fresh.png";
+  static const String dairy = "assets/icons/categories/dairy-products.png";
+  static const String essential = "assets/icons/categories/essential.png";
+
+  //products
+  static const String dairymilkSilk = "assets/products/dairymilksilk.jpg";
 
 }
