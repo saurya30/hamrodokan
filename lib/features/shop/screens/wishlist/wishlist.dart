@@ -3,7 +3,7 @@ import 'package:hamrodokan/common/widgets/appbar/appbar.dart';
 import 'package:hamrodokan/common/widgets/icons/t_circular_icon.dart';
 import 'package:hamrodokan/common/widgets/layouts/grid_layout.dart';
 import 'package:hamrodokan/common/widgets/products/products_cart/product_card_vertical.dart';
-import 'package:hamrodokan/features/authentication/screens/home/widget/home.dart';
+import 'package:hamrodokan/features/shop/screens/home/home.dart';
 import 'package:hamrodokan/utils/constants/sizes.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:get/get.dart';

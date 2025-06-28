@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hamrodokan/features/authentication/screens/home/widget/home.dart';
+import 'package:hamrodokan/features/shop/screens/home/home.dart';
 import 'package:hamrodokan/features/personalization/screens/settings/settings.dart';
 import 'package:hamrodokan/features/shop/screens/store/store.dart';
 import 'package:hamrodokan/features/shop/screens/wishlist/wishlist.dart';

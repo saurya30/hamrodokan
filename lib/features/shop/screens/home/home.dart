@@ -5,14 +5,14 @@ import 'package:hamrodokan/utils/constants/image_strings.dart';
 
 import 'package:hamrodokan/utils/constants/sizes.dart';
 
-import '../../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
-import '../../../../../common/widgets/custom_shapes/containers/search_container.dart';
+import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
+import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
 
-import '../../../../../common/widgets/layouts/grid_layout.dart';
-import '../../../../../common/widgets/products/products_cart/product_card_vertical.dart';
-import '../../../../../common/widgets/texts/section_heading.dart';
+import '../../../../common/widgets/layouts/grid_layout.dart';
+import '../../../../common/widgets/products/products_cart/product_card_vertical.dart';
+import '../../../../common/widgets/texts/section_heading.dart';
 
-import 'home_categories.dart';
+import '../../../authentication/screens/home/widget/home_categories.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
