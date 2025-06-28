@@ -4,6 +4,7 @@ import 'package:hamrodokan/common/widgets/custom_shapes/containers/primary_heade
 import 'package:hamrodokan/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:hamrodokan/common/widgets/texts/section_heading.dart';
 import 'package:hamrodokan/features/personalization/screens/address/address.dart';
+import 'package:hamrodokan/features/shop/screens/order/order.dart';
 
 import 'package:hamrodokan/utils/constants/sizes.dart';
 import 'package:iconsax/iconsax.dart';
@@ -75,7 +76,7 @@ class SettingsScreen extends StatelessWidget {
                     icon: Iconsax.bag_tick,
                     title: 'My Orders',
                     subTitle: 'In progress and completed orders',
-                    onTap: () {},
+                    onTap: () => Get.to(()=>OrderScreen()),
                   ),
                   TSettingsMenuTile(
                     icon: Iconsax.bank,
