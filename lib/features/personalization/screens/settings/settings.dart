@@ -9,6 +9,9 @@ import 'package:iconsax/iconsax.dart';
 
 import '../../../../common/widgets/list_tiles/user_profile_tile.dart';
 import '../../../../utils/constants/colors.dart';
+import 'package:get/get.dart';
+
+import '../profile/profile.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
@@ -19,10 +22,12 @@ class SettingsScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
+
             ///header
             TPrimaryHeaderContainer(
               child: Column(
                 children: [
+
                   ///appbar
                   TAppbar(
                     title: Text(
@@ -35,7 +40,7 @@ class SettingsScreen extends StatelessWidget {
                   SizedBox(height: TSizes.spaceBtwSections),
 
                   ///user profile card
-                  TUserProfileTile(),
+                  TUserProfileTile(onPressed: ()=> Get.to(()=> ProfileScreen())),
                   SizedBox(height: TSizes.spaceBtwSections),
                 ],
               ),

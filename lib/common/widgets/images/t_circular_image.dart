@@ -29,7 +29,7 @@ class TCircularImage extends StatelessWidget {
     return Container(
       height: height,
       width: width,
-      padding: EdgeInsets.all(TSizes.sm),
+      padding: EdgeInsets.all(padding),
       decoration: BoxDecoration(
         color: THelperFunctions.isDarkMode(context)
             ? TColors.black

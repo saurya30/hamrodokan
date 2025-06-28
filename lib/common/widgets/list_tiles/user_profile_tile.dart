@@ -7,8 +7,9 @@ import '../images/t_circular_image.dart';
 
 class TUserProfileTile extends StatelessWidget {
   const TUserProfileTile({
-    super.key,
+    super.key, required this.onPressed,
   });
+  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
