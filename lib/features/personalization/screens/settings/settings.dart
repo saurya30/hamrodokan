@@ -3,6 +3,7 @@ import 'package:hamrodokan/common/widgets/appbar/appbar.dart';
 import 'package:hamrodokan/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:hamrodokan/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:hamrodokan/common/widgets/texts/section_heading.dart';
+import 'package:hamrodokan/features/personalization/screens/address/address.dart';
 
 import 'package:hamrodokan/utils/constants/sizes.dart';
 import 'package:iconsax/iconsax.dart';
@@ -62,7 +63,7 @@ class SettingsScreen extends StatelessWidget {
                     icon: Iconsax.safe_home,
                     title: 'My Addresses',
                     subTitle: 'Set shopping delivery address',
-                    onTap: () {},
+                    onTap: ()=> Get.to(()=>UserAddressScreen()),
                   ),
                   TSettingsMenuTile(
                     icon: Iconsax.shopping_cart,
