@@ -36,6 +36,11 @@ class TImages{
   static const String dairymilkSilk = "assets/products/dairymilksilk.jpg";
   static const String milk = "assets/products/milk.png";
 
+  //Payment methods
+  static const String esewa="assets/icons/payment_methods/esewa.png";
+  static const String khalti="assets/icons/payment_methods/khalti.png";
+  static const String fonepay="assets/icons/payment_methods/fonepay.png";
+
   //users
   static const String user = "assets/user/user.png";
 

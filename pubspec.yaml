@@ -58,6 +58,7 @@ flutter:
     - assets/user/
     - assets/products/
     - assets/animation
+    - assets/icons/payment_methods/
 
 
   #-------LOCAL FONTS-------#

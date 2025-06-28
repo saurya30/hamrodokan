@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:hamrodokan/common/styles/spacing_styles.dart';
+import 'package:lottie/lottie.dart';
 
 import '../../../utils/constants/sizes.dart';
 import '../../../utils/helpers/helper_functions.dart';
@@ -12,10 +13,12 @@ class SuccessScreen extends StatelessWidget {
     required this.title,
     required this.subtitle,
     required this.onPressed,
+    required this.lottieAsset,
   });
 
   final String image, title, subtitle;
   final VoidCallback onPressed;
+  final String lottieAsset;
 
   @override
   Widget build(BuildContext context) {
@@ -55,6 +58,12 @@ class SuccessScreen extends StatelessWidget {
                   onPressed: onPressed,
                   child: Text("Continue"),
                 ),
+              ),
+
+              Lottie.asset(
+                lottieAsset,
+                height: 200,
+                repeat: false,
               ),
             ],
           ),

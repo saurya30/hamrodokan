@@ -65,6 +65,7 @@ class VerifyEmailScreen extends StatelessWidget {
                       title: TTexts.verifyEmailTitle,
                       subtitle: TTexts.verifyEmailSubTitle,
                       onPressed: () => Get.to(() => LoginScreen()),
+                      lottieAsset: 'null',
                     ),
                   ),
                   child: Text("Continue"),

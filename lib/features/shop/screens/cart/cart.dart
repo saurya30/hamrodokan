@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:hamrodokan/common/widgets/appbar/appbar.dart';
 import 'package:hamrodokan/common/widgets/texts/product_price_text.dart';
+import 'package:hamrodokan/features/shop/checkout/widgets/checkout.dart';
+import 'package:hamrodokan/features/shop/screens/cart/widgets/cart_items.dart';
 
 import 'package:hamrodokan/utils/constants/sizes.dart';
 
@@ -19,43 +23,20 @@ class CartScreen extends StatelessWidget {
         showBackArrow: true,
         title: Text('Cart', style: Theme.of(context).textTheme.headlineSmall),
       ),
-      body: Padding(
+      body:const Padding(
         padding: EdgeInsets.all(TSizes.defaultSpace),
-        child: ListView.separated(
-          shrinkWrap: true,
-          separatorBuilder: (_, _) =>
-              SizedBox(height: TSizes.spaceBtwSections),
-          itemCount: 10,
-          itemBuilder: (_,index) => Column(
-            children: [
-              TCartItem(),
-              SizedBox(height: TSizes.spaceBtwItems,),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    children: [
-                      ///extra space
-                      SizedBox(width: 70,),
-                      ///add remove button
-                      TProductQuantityWithAddRemoveButton(),
-                    ],
-                  ),
-                  TProductPriceText(price: '256'),
-                ],
-              ),
-            ],
-          ),
-
-        ),
+        child: TCartItems(),
       ),
+      ///Checkout button
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(TSizes.defaultSpace),
-        child: ElevatedButton(onPressed: (){}, child: Text('Checkout \$256.0')),
+        child: ElevatedButton(onPressed: ()=> Get.to(()=> const  CheckoutScreen()), child: Text('Checkout \$256.0')),
       ),
     );
   }
 }
+
+
 
 
 
