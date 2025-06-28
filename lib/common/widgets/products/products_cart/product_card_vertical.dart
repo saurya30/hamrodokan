@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hamrodokan/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:hamrodokan/common/widgets/images/t_rounded_image.dart';
+import 'package:hamrodokan/features/shop/screens/product_details/product_details.dart';
 import 'package:hamrodokan/utils/constants/image_strings.dart';
 import 'package:hamrodokan/utils/helpers/helper_functions.dart';
 import 'package:iconsax/iconsax.dart';
@@ -12,6 +13,7 @@ import '../../icons/t_circular_icon.dart';
 import '../../texts/product_price_text.dart';
 import '../../texts/product_title_text.dart';
 import '../../texts/t_brand_title_text_with_verified_icon.dart';
+import 'package:get/get.dart';
 
 class TProductCardVertical extends StatelessWidget {
   const TProductCardVertical({super.key});
@@ -22,7 +24,7 @@ class TProductCardVertical extends StatelessWidget {
 
     ///Container with side paddings, color, edges, radius and shdaow.
     return GestureDetector(
-      onTap: (){},
+      onTap: () => Get.to(()=> const ProductDetails()),
       child: Container(
         width: 180,
         padding: EdgeInsets.all(1),
