@@ -5,9 +5,11 @@ import 'package:hamrodokan/features/shop/screens/product_details/widgets/product
 import 'package:hamrodokan/features/shop/screens/product_details/widgets/product_detail_image_slider.dart';
 import 'package:hamrodokan/features/shop/screens/product_details/widgets/product_meta_data.dart';
 import 'package:hamrodokan/features/shop/screens/product_details/widgets/rating_share_widget.dart';
+import 'package:hamrodokan/features/shop/screens/product_reviews/product_review.dart';
 import 'package:hamrodokan/utils/constants/sizes.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:readmore/readmore.dart';
+import 'package:get/get.dart';
 
 class ProductDetails extends StatelessWidget {
   const ProductDetails({super.key});
@@ -65,7 +67,7 @@ class ProductDetails extends StatelessWidget {
                   Row(
                     children: [
                       TSectionHeading(title: 'Reviews(100)',showActionButton: false,onPressed: (){},),
-                      IconButton(onPressed: (){}, icon: Icon(Iconsax.arrow_right_3)),
+                      IconButton(onPressed: ()=>Get.to(()=>ProductReviewScreen()), icon: Icon(Iconsax.arrow_right_3)),
                     ],
                   ),
                   SizedBox(height: TSizes.spaceBtwSections,),
