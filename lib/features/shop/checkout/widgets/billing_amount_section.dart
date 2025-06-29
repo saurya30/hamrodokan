@@ -23,7 +23,7 @@ class TBillingAmountSection extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text('Shipping Fee', style: Theme.of(context).textTheme.bodyMedium),
-            Text('\6.0',style: Theme.of(context).textTheme.labelLarge),
+            Text('6.0',style: Theme.of(context).textTheme.labelLarge),
           ],
         ),
         const  SizedBox(height: TSizes.spaceBtwItems/2),
@@ -33,7 +33,7 @@ class TBillingAmountSection extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text('Tax Fee', style: Theme.of(context).textTheme.bodyMedium),
-            Text('\6.0',style: Theme.of(context).textTheme.labelLarge),
+            Text('6.0',style: Theme.of(context).textTheme.labelLarge),
           ],
         ),
         const  SizedBox(height: TSizes.spaceBtwItems/2),
@@ -43,7 +43,7 @@ class TBillingAmountSection extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text('Order Total', style: Theme.of(context).textTheme.bodyMedium),
-            Text('\6.0',style: Theme.of(context).textTheme.titleMedium),
+            Text('6.0',style: Theme.of(context).textTheme.titleMedium),
           ],
         ),
         const  SizedBox(height: TSizes.spaceBtwItems/2),

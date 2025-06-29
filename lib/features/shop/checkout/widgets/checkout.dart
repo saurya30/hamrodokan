@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:hamrodokan/common/widgets/appbar/appbar.dart';
 import 'package:hamrodokan/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:hamrodokan/common/widgets/widgets_success_screen/success_screen.dart';
@@ -9,13 +8,11 @@ import 'package:hamrodokan/features/shop/checkout/widgets/billing_amount_section
 import 'package:hamrodokan/features/shop/screens/cart/widgets/cart_items.dart';
 import 'package:hamrodokan/navigation_menu.dart';
 import 'package:hamrodokan/utils/constants/colors.dart';
-import 'package:hamrodokan/utils/constants/image_strings.dart';
 import 'package:hamrodokan/utils/helpers/helper_functions.dart';
 
 import '../../../../common/widgets/products/cart/coupon_widget.dart';
 import '../../../../utils/constants/sizes.dart';
 import 'billing_payment_section.dart';
-import 'package:lottie/lottie.dart';
 
 
 class CheckoutScreen extends StatelessWidget {

@@ -1,16 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:hamrodokan/common/widgets/appbar/appbar.dart';
-import 'package:hamrodokan/common/widgets/texts/product_price_text.dart';
 import 'package:hamrodokan/features/shop/checkout/widgets/checkout.dart';
 import 'package:hamrodokan/features/shop/screens/cart/widgets/cart_items.dart';
 
 import 'package:hamrodokan/utils/constants/sizes.dart';
 
 
-import '../../../../common/widgets/products/cart/add_remove_button.dart';
-import '../../../../common/widgets/products/cart/cart_item.dart';
 
 
 class CartScreen extends StatelessWidget {

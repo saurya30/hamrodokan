@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hamrodokan/features/authentication/screens/home/widget/home_appbar.dart';
 import 'package:hamrodokan/features/authentication/screens/home/widget/promo_slider.dart';
+import 'package:hamrodokan/features/shop/all_products/all_products.dart';
 import 'package:hamrodokan/utils/constants/image_strings.dart';
 
 import 'package:hamrodokan/utils/constants/sizes.dart';
@@ -75,11 +77,12 @@ class HomeScreen extends StatelessWidget {
                  const SizedBox(height: TSizes.spaceBtwSections),
 
                   ///heading
-                  TSectionHeading(title: 'Popular Products',onPressed: (){}),
-                  const SizedBox(height: TSizes.spaceBtwItems,),
+                  TSectionHeading(title: 'Popular Products',onPressed: () => Get.to(() => const AllProducts())),
+                  const SizedBox(height: TSizes.spaceBtwItems),
 
                   ///popular products
                   TGridLayout(itemCount: 2, itemBuilder: (_ , index )=> TProductCardVertical()),
+
                 ],
               ),
             ),

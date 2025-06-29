@@ -44,4 +44,35 @@ class TImages{
   //users
   static const String user = "assets/user/user.png";
 
+  //Thumbnail images
+  static const String beer = "assets/Thumbnailimages/beer.jpg";
+  static const String blukchocolate = "assets/Thumbnailimages/blukchocolate.jpg";
+  static const String coffee = "assets/Thumbnailimages/coffee.jpg";
+  static const String cosmetic = "assets/Thumbnailimages/cosmetic.jpg";
+  static const String daal = "assets/Thumbnailimages/daal.jpg";
+  static const String flour = "assets/Thumbnailimages/flour.jpg";
+  static const String frozenmeat = "assets/Thumbnailimages/frozen meat.jpg";
+  static const String frozenmomo = "assets/Thumbnailimages/frozen momo.jpg";
+  static const String handwash = "assets/Thumbnailimages/handwash.jpg";
+  static const String herbs = "assets/Thumbnailimages/herbs and spices.jpg";
+  static const String icecream = "assets/Thumbnailimages/icecream.jpg";
+  static const String icecube= "assets/Thumbnailimages/icecube.jpg";
+  static const String muesli= "assets/Thumbnailimages/muesli.jpg";
+  static const String namkeen= "assets/Thumbnailimages/namkeen.jpg";
+  static const String nuts= "assets/Thumbnailimages/nuts.jpg";
+  static const String oil= "assets/Thumbnailimages/oil.jpg";
+  static const String potatochips= "assets/Thumbnailimages/potato chips.jpg";
+  static const String rice= "assets/Thumbnailimages/rice.jpg";
+  static const String salt= "assets/Thumbnailimages/salt.jpg";
+  static const String sausage= "assets/Thumbnailimages/sausage.jpg";
+  static const String shampoo= "assets/Thumbnailimages/shampoo.jpg";
+  static const String vodka= "assets/Thumbnailimages/vodka.jpg";
+  static const String wine= "assets/Thumbnailimages/wine.jpg";
+  static const String chocolate= "assets/Thumbnailimages/chocolate.jpg";
+  static const String csd= "assets/Thumbnailimages/csd.jpg";
+  static const String cookies= "assets/Thumbnailimages/cookies.jpg";
+  static const String crackers= "assets/Thumbnailimages/crackers.jpg";
+  static const String fruitjuice= "assets/Thumbnailimages/fruitjuice.jpg";
+  static const String instantnoodles= "assets/Thumbnailimages/instantnoodles.jpg";
+
 }
