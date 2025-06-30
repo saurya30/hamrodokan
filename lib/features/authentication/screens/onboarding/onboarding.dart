@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hamrodokan/features/authentication/controllers/onboarding_controller.dart';
+import 'package:hamrodokan/features/authentication/controllers/onboarding/onboarding_controller.dart';
 import '../onboarding_widgets/onboading_slides.dart';
 import '../onboarding_widgets/onboarding_dot_navigation.dart';
 import '../onboarding_widgets/onboarding_next_button.dart';

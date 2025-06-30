@@ -12,7 +12,7 @@ class TValidator{
       return 'Email is required.';
     }
         //regular expression to validate email
-    final emailRegExp = RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$');
+    final emailRegExp = RegExp(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$');
 
     if(!emailRegExp.hasMatch(value)){
       return 'Invalid email address';
@@ -56,7 +56,7 @@ class TValidator{
     final phoneRegExp = RegExp(r'^\d{10}$');
 
     if(!phoneRegExp.hasMatch(value)){
-      return 'Invalid phone number format (10 digits required).';
+      return 'Invalid phone number format.';
     }
     return null;
   }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hamrodokan/features/authentication/controllers/onboarding_controller.dart';
+import 'package:hamrodokan/features/authentication/controllers/onboarding/onboarding_controller.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../../utils/constants/colors.dart';
