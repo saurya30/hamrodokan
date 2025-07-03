@@ -4,6 +4,7 @@ import 'package:hamrodokan/common/widgets/images/t_circular_image.dart';
 import 'package:hamrodokan/common/widgets/texts/section_heading.dart';
 import 'package:hamrodokan/features/personalization/screens/profile/widgets/change_name.dart';
 import 'package:hamrodokan/features/personalization/screens/profile/widgets/profile_menu.dart';
+import 'package:hamrodokan/features/shop/screens/home/home_widgets/shimmer.dart';
 import 'package:hamrodokan/utils/constants/sizes.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:get/get.dart';
@@ -34,8 +35,14 @@ class ProfileScreen extends StatelessWidget {
                 width: double.infinity,
                 child: Column(
                   children: [
-                    TCircularImage(image: TImages.user, width: 80, height: 80,),
-                    TextButton(onPressed: (){}, child: Text('Change Profile Picture')),
+                    Obx((){
+                      final networkImage = controller.user.value.profilePicture;
+                      final image = networkImage.isNotEmpty? networkImage : TImages.user;
+                      return controller.imageUploading.value?
+                      TShimmerEffect(width: 80, height: 80,radius: 80,)
+                      : TCircularImage(image: image, width: 80, height: 80,isNetworkImage: networkImage.isNotEmpty,);
+                    }),
+                    TextButton(onPressed: ()=> controller.uploadUserProfilePicture(), child: Text('Change Profile Picture')),
                   ],
                 ),
               ),
