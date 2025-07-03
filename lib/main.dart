@@ -6,7 +6,7 @@ import 'package:hamrodokan/app.dart';
 import 'package:hamrodokan/data/repositories/authentication/authentication_repository.dart';
 import 'package:get/get.dart';
 
-import 'firebase_options.dart';
+
 
 Future<void> main() async {
   ///add widgets binding
@@ -20,9 +20,9 @@ Future<void> main() async {
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
   ///initialize firebase and authentication repository
-  await Firebase.initializeApp(
+  /*await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
-  ).then((FirebaseApp value) => Get.put(AuthenticationRepository()));
+  ).then((FirebaseApp value) => Get.put(AuthenticationRepository()));*/
 
   ///load all the material design
   runApp(const App());

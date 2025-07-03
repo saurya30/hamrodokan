@@ -67,6 +67,8 @@ flutter:
     - assets/animation/
     - assets/icons/payment_methods/
     - assets/Thumbnailimages/
+    - assets/foods/
+    - assets/staple/
 
 
   #-------LOCAL FONTS-------#
