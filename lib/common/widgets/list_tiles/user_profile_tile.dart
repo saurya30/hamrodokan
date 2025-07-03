@@ -33,7 +33,7 @@ class TUserProfileTile extends StatelessWidget {
         ).textTheme.bodyMedium!.apply(color: TColors.white),
       ),
       trailing: IconButton(
-        onPressed: () {},
+        onPressed: onPressed,
         icon: Icon(Iconsax.edit, color: TColors.white),
       ),
     );

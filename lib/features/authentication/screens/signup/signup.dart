@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:hamrodokan/features/authentication/screens/signup/signup_widgets/signup_form.dart';
 import 'package:hamrodokan/utils/constants/sizes.dart';
 import 'package:hamrodokan/utils/helpers/helper_functions.dart';
 import '../../../../common/widgets/widgets_login_signup/divider.dart';
 import '../../../../common/widgets/widgets_login_signup/social_buttons.dart';
-import '../signup_widgets/signup_form.dart';
 
 class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});
@@ -12,6 +12,7 @@ class SignupScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = THelperFunctions.isDarkMode(context);
     return Scaffold(
+      backgroundColor: const Color(0xFF8E2DE2),
       appBar: AppBar(),
       body: SingleChildScrollView(
         child: Padding(

@@ -3,6 +3,7 @@ import 'package:hamrodokan/common/widgets/appbar/appbar.dart';
 import 'package:hamrodokan/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:hamrodokan/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:hamrodokan/common/widgets/texts/section_heading.dart';
+import 'package:hamrodokan/features/authentication/screens/login/login.dart';
 import 'package:hamrodokan/features/personalization/screens/address/address.dart';
 import 'package:hamrodokan/features/shop/screens/order/order.dart';
 
@@ -131,7 +132,7 @@ class SettingsScreen extends StatelessWidget {
                   SizedBox(height: TSizes.spaceBtwSections,),
                   SizedBox(
                     width: double.infinity,
-                    child: OutlinedButton(onPressed: (){}, child: Text('Logout')),
+                    child: OutlinedButton(onPressed: ()=> Get.to(()=>LoginScreen()), child: Text('Logout')),
                   ),
                   SizedBox(height: TSizes.spaceBtwSections,),
                 ],

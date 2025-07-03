@@ -75,4 +75,6 @@ class TImages{
   static const String fruitjuice= "assets/Thumbnailimages/fruitjuice.jpg";
   static const String instantnoodles= "assets/Thumbnailimages/instantnoodles.jpg";
 
+  ///animations
+  static const String dockerAnimation = "assets/animation/docerAnimation.json";
 }

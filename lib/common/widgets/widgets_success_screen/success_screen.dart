@@ -13,62 +13,80 @@ class SuccessScreen extends StatelessWidget {
     required this.title,
     required this.subtitle,
     required this.onPressed,
-    required this.lottieAsset,
+     this.lottieAsset,
   });
 
   final String image, title, subtitle;
   final VoidCallback onPressed;
-  final String lottieAsset;
+  final String? lottieAsset;
 
   @override
   Widget build(BuildContext context) {
+    final screenHeight = MediaQuery.of(context).size.height;
+    final screenWidth = THelperFunctions.screenWidth();
+
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: TSpacingStyle.paddingWithAppBarHeight * 2,
-          child: Column(
-            children: [
-              ///Image
-              Image(
-                image: AssetImage(image),
-                width: THelperFunctions.screenWidth() * 0.6,
-              ),
-              SizedBox(height: TSizes.spaceBtwItems),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: ConstrainedBox(
+            constraints: BoxConstraints(minHeight: screenHeight),
+            child: IntrinsicHeight(
+              child: Padding(
+                padding: TSpacingStyle.paddingWithAppBarHeight * 2,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    /// Image
+                    Image.asset(
+                      image,
+                      width: screenWidth * 0.6,
+                      height: 200,
+                      fit: BoxFit.contain,
+                    ),
+                    SizedBox(height: TSizes.spaceBtwItems),
 
-              ///Title and subtitle
-              Text(
-                title,
-                style: Theme.of(context).textTheme.headlineMedium,
-                textAlign: TextAlign.center,
-              ),
+                    /// Title
+                    Text(
+                      title,
+                      style: Theme.of(context).textTheme.headlineMedium,
+                      textAlign: TextAlign.center,
+                    ),
+                    SizedBox(height: TSizes.spaceBtwItems),
 
-              SizedBox(height: TSizes.spaceBtwItems),
+                    /// Subtitle
+                    Text(
+                      subtitle,
+                      style: Theme.of(context).textTheme.labelMedium,
+                      textAlign: TextAlign.center,
+                    ),
+                    SizedBox(height: TSizes.spaceBtwSections),
 
-              Text(
-                subtitle,
-                style: Theme.of(context).textTheme.labelMedium,
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: TSizes.spaceBtwSections),
+                    /// Continue Button
+                    SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton(
+                        onPressed: onPressed,
+                        child: Text("Continue"),
+                      ),
+                    ),
 
-              ///buttons
-              SizedBox(
-                width: double.infinity,
-                child: ElevatedButton(
-                  onPressed: onPressed,
-                  child: Text("Continue"),
+                    /// Optional Lottie Animation
+                    if (lottieAsset != null && lottieAsset!.trim().isNotEmpty)
+                      Padding(
+                        padding: const EdgeInsets.only(top: 24.0),
+                        child: Lottie.asset(
+                          lottieAsset!,
+                          height: 200,
+                          repeat: false,
+                        ),
+                      ),
+                  ],
                 ),
               ),
-
-              Lottie.asset(
-                lottieAsset,
-                height: 200,
-                repeat: false,
-              ),
-            ],
+            ),
           ),
         ),
       ),
     );
   }
-}
+  }

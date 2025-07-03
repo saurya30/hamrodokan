@@ -84,11 +84,11 @@ class StoreScreen extends StatelessWidget {
                 ///tabs
                 bottom: TTabBar(
                   tabs: [
-                    Tab(child: Text('Sports')),
-                    Tab(child: Text('Furniture')),
-                    Tab(child: Text('Electronics')),
-                    Tab(child: Text('Clothes')),
-                    Tab(child: Text('Cosmetics')),
+                    Tab(child: Text('Vegetables')),
+                    Tab(child: Text('Pickles')),
+                    Tab(child: Text('Snacks')),
+                    Tab(child: Text('Tea/Coffee')),
+                    Tab(child: Text('Spices')),
                   ],
                 ),
               ),

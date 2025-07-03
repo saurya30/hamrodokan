@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:hamrodokan/network_manager.dart';
+import 'package:hamrodokan/utils/helpers/network_manager.dart';
 
 class GeneralBindings extends Bindings{
 

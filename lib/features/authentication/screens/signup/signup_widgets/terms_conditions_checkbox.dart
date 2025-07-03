@@ -38,8 +38,8 @@ class TTermsAndConditionCheckbox extends StatelessWidget {
               TextSpan(
                 text: "Privacy and Policy ",
                 style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                  color: dark ? TColors.white : TColors.primary,
-                  decorationColor: dark ? TColors.white : TColors.primary,
+                  color: dark ? TColors.white : TColors.white,
+                  decorationColor: dark ? TColors.white : TColors.white,
                 ),
                 recognizer: TapGestureRecognizer()
                   ..onTap = () {
@@ -54,8 +54,8 @@ class TTermsAndConditionCheckbox extends StatelessWidget {
               TextSpan(
                 text: "Terms of Use",
                 style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                  color: dark ? TColors.white : TColors.primary,
-                  decorationColor: dark ? TColors.white : TColors.primary,
+                  color: dark ? TColors.white : TColors.white,
+                  decorationColor: dark ? TColors.white : TColors.white,
                 ),
                 recognizer: TapGestureRecognizer()
                   ..onTap = () {

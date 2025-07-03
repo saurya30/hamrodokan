@@ -52,7 +52,7 @@ class TProductAttributes extends StatelessWidget {
                             SizedBox(width: TSizes.spaceBtwItems),
 
                             ///sale price
-                            TProductPriceText(price: '\$20'),
+                            TProductPriceText(price: '20'),
                           ],
                         ),
 
@@ -73,7 +73,7 @@ class TProductAttributes extends StatelessWidget {
 
                 ///variation description
                 TProductTitleText(
-                  title: 'This is description of product upto 4 lines max',
+                  title: 'This is description of dairy milk silk',
                   smallSize: true,
                   maxLines: 4,
                 ),
@@ -87,14 +87,14 @@ class TProductAttributes extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-             TSectionHeading(title: 'Colors',showActionButton: false,),
+             TSectionHeading(title: 'Flavors',showActionButton: false,),
             SizedBox(height: TSizes.spaceBtwItems/2,),
             Wrap(
               spacing: 8,
               children: [
                 TChoiceChip(text: 'Green', selected: true,onSelected: (value){},),
                 TChoiceChip(text: 'Red', selected: false,onSelected: (value){}),
-                TChoiceChip(text: 'Blue', selected: false,onSelected: (value){}),
+                TChoiceChip(text: 'Brown', selected: false,onSelected: (value){}),
               ],
             )
           ],
@@ -107,9 +107,9 @@ class TProductAttributes extends StatelessWidget {
             Wrap(
               spacing: 8,
               children: [
-                TChoiceChip(text: 'EU 34', selected: true,onSelected: (value){}),
-                TChoiceChip(text: 'EU 36', selected: false,onSelected: (value){}),
-                TChoiceChip(text: 'EU 38', selected: false,onSelected: (value){}),
+                TChoiceChip(text: '100g', selected: true,onSelected: (value){}),
+                TChoiceChip(text: '200g', selected: false,onSelected: (value){}),
+                TChoiceChip(text: '300g', selected: false,onSelected: (value){}),
               ],
             ),
           ],

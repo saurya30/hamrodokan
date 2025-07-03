@@ -17,19 +17,24 @@ class LoginHeader extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Image(
-          image: AssetImage(
-            dark ? TImages.lightAppLogo : TImages.darkAppLogo,
+        Center(
+          child: ClipOval(
+            child: Image.asset(
+              dark ? TImages.lightAppLogo : TImages.darkAppLogo,
+              height: 150,
+              width: 150,
+              fit: BoxFit.cover,
+            ),
           ),
-          height: 150,
         ),
+
         Text(
-          TTexts.loginTitle,
+          TTexts.loginTitle??'',
           style: Theme.of(context).textTheme.headlineMedium,
         ),
         SizedBox(height: TSizes.sm),
         Text(
-          TTexts.loginSubTitle,
+          TTexts.loginSubTitle??'',
           style: Theme.of(context).textTheme.bodyMedium,
         ),
       ],

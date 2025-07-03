@@ -1,10 +1,11 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 import '../../../user_model.dart';
+import '../../../utils/exceptions/firebase_exceptions.dart';
+import '../../../utils/exceptions/format_exceptions.dart';
+import '../../../utils/exceptions/platform_exceptions.dart';
 
 ///repository class for user-related operations
 class UserRepository extends GetxController{
@@ -20,9 +21,10 @@ class UserRepository extends GetxController{
       throw TFirebaseException(e.code).message;
     } on FormatException catch(_){
       throw const TFormatException();
-    } on PlatformException catch(e)
+    } on PlatformException catch(e){
       throw TPlatformException(e.code).message;
-  }catch(e){
-    throw 'Something went wrong. Please try again';
+  } catch(e) {
+      throw 'Something went wrong. Please try again';
+    }
   }
 }

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:hamrodokan/features/authentication/controllers/login/login_controller.dart';
 
 import '../../../utils/constants/colors.dart';
 import '../../../utils/constants/image_strings.dart';
 import '../../../utils/constants/sizes.dart';
+import 'package:get/get.dart';
 
 class SocialButtons extends StatelessWidget {
   const SocialButtons({
@@ -11,6 +13,7 @@ class SocialButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(LoginController());
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -20,7 +23,7 @@ class SocialButtons extends StatelessWidget {
             borderRadius: BorderRadius.circular(100),
           ),
           child: IconButton(
-            onPressed: (){},
+            onPressed: ()=>controller.googleSignIn(),
             icon: Image(
               image: AssetImage(TImages.google),
               width: TSizes.iconMd,

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hamrodokan/features/authentication/controllers/forget_password/forget_password_controller.dart';
 import 'package:hamrodokan/features/authentication/screens/login/login.dart';
 import 'package:hamrodokan/utils/constants/image_strings.dart';
 import 'package:hamrodokan/utils/constants/sizes.dart';
@@ -9,8 +10,10 @@ import 'package:hamrodokan/utils/constants/text_strings.dart';
 import '../../../../utils/helpers/helper_functions.dart';
 
 class ResetPassword extends StatelessWidget {
-  const ResetPassword({super.key});
+  const ResetPassword({super.key, required this.email, });
 
+  final String email;
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,11 +40,17 @@ class ResetPassword extends StatelessWidget {
                 SizedBox(height: TSizes.spaceBtwItems),
 
                 ///Title and subtitle
+                Text(email,style: Theme.of(context).textTheme.bodyMedium,textAlign: TextAlign.center,),
+                SizedBox(height: TSizes.spaceBtwItems,),
+                Text(TTexts.resetPasswordTitle,
+                  style: Theme.of(context).textTheme.bodyMedium,
+                  textAlign: TextAlign.center,
+                ),
+                SizedBox(height: TSizes.spaceBtwItems),
                 Text(TTexts.resetPasswordTitle,
                   style: Theme.of(context).textTheme.headlineMedium,
                   textAlign: TextAlign.center,
                 ),
-
                 SizedBox(height: TSizes.spaceBtwItems),
 
                 Text(TTexts.resetPasswordSubTitle,
@@ -54,7 +63,7 @@ class ResetPassword extends StatelessWidget {
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: ()=>Get.to(()=>LoginScreen()),
+                    onPressed: ()=> Get.offAll(()=>LoginScreen()),
                     child: Text("Done"),
                   ),
                 ),
@@ -64,11 +73,7 @@ class ResetPassword extends StatelessWidget {
                 SizedBox(
                   width: double.infinity,
                   child: TextButton(
-                    onPressed: (){
-                      ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(content: Text("Reset email sent again. Please check your inbox."))
-                      );
-                    },
+                    onPressed: () => ForgetPasswordController.instance.resendPasswordResetEmail(email),
                     child: Text("Resend Email"),
                   ),
                 ),

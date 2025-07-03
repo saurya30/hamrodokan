@@ -62,6 +62,7 @@ class SignupForm extends StatelessWidget {
               prefixIcon: Icon(Iconsax.user_edit),
             ),
           ),
+          SizedBox(height: TSizes.spaceBtwInputFields),
 
           ///email
           TextFormField(
@@ -119,6 +120,9 @@ class SignupForm extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.black,
+              ),
               onPressed: () => controller.signup(),
               child: Text("Create Account"),
             ),

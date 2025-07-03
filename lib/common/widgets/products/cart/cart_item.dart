@@ -42,9 +42,9 @@ class TCartItem extends StatelessWidget {
                   TextSpan(
                     children: [
                       TextSpan(text: 'Color',style: Theme.of(context).textTheme.bodySmall),
-                      TextSpan(text: 'Green',style: Theme.of(context).textTheme.bodyLarge),
-                      TextSpan(text: 'Size',style: Theme.of(context).textTheme.bodySmall),
-                      TextSpan(text: 'Uk 08',style: Theme.of(context).textTheme.bodyLarge),
+                      TextSpan(text: 'Blue',style: Theme.of(context).textTheme.bodyLarge),
+                      TextSpan(text: 'Type',style: Theme.of(context).textTheme.bodySmall),
+                      TextSpan(text: 'Silk',style: Theme.of(context).textTheme.bodyLarge),
                     ],
                   )
               ),

@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:hamrodokan/utils/formatters/formatter.dart';
 
 ///model class representing user data
@@ -47,6 +48,7 @@ class UserModel{
     ///convert model to JSON structure for storing data in Firebase
     Map<String, dynamic> toJson(){
       return{
+        'ID' : id,
         'FirstName' : firstName,
         'LastName' : lastName,
         'Username' : username,
@@ -56,20 +58,19 @@ class UserModel{
       };
     }
 
-    // ///factory method to create a UserModel from a Firebase document snapshot
-    // factory UserModel.fromSnapshot(DocumentSnapshot<Map<String, dynamic>> document){
-    //   if(document.data() != null){
-    //     final data =document.data()!;
-    //     return UserModel(
-    //       id: document.id,
-    //       firstName: data['FirstName'] ??'',
-    //       lastName: data['LastName'] ??'',
-    //       username: data['Username'] ??'',
-    //       email: data['Email'] ??'',
-    //       phoneNumber: data['PhoneNumber'] ??'',
-    //       profilePicture: data['ProfilePicture'] ??'',
-    //     );
-    //   }
-    //   return ;
-    // }
+    ///factory method to create a UserModel from a Firebase document snapshot
+  factory UserModel.fromSnapshot(DocumentSnapshot<Map<String, dynamic>> document) {
+    final data = document.data();
+    if (data == null) throw Exception("User document does not exist");
+
+    return UserModel(
+      id: document.id,
+      firstName: data['FirstName'] ?? '',
+      lastName: data['LastName'] ?? '',
+      username: data['Username'] ?? '',
+      email: data['Email'] ?? '',
+      phoneNumber: data['PhoneNumber'] ?? '',
+      profilePicture: data['ProfilePicture'] ?? '',
+    );
+  }
 }

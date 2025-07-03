@@ -6,7 +6,7 @@ import 'package:hamrodokan/data/repositories/user/user_repository.dart';
 import 'package:hamrodokan/features/authentication/screens/signup/verify_email.dart';
 import 'package:hamrodokan/utils/constants/image_strings.dart';
 
-import '../../../../network_manager.dart';
+import '../../../../utils/helpers/network_manager.dart';
 import '../../../../user_model.dart';
 import '../../../../utils/popups/full_screen_loader.dart';
 
@@ -28,7 +28,7 @@ class SignupController extends GetxController{
   void signup() async{
     try{
       ///start loading
-      TFullScreenLoader.openLoadingDialog('We are processing your information...', TImages.facebook);
+      TFullScreenLoader.openLoadingDialog('We are processing your information...', TImages.dockerAnimation);
 
       ///check internet connectivity
       final isConnected = await NetworkManager.instance.isConnected();
@@ -81,7 +81,7 @@ class SignupController extends GetxController{
 
 
       ///move to verify email screen
-      Get.to(()=>VerifyEmailScreen());
+      Get.to(()=>VerifyEmailScreen(email: email.text.trim(),));
     }catch(e){
       //remove loader
       TFullScreenLoader.stopLoading();
