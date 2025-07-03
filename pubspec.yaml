@@ -21,6 +21,7 @@ dependencies:
   flutter_native_splash: ^2.3.2
   smooth_page_indicator: ^1.2.1
   connectivity_plus: ^6.1.4
+  shimmer: ^3.0.0
 
   
 #--------ICONS---------#
@@ -43,6 +44,7 @@ dependencies:
   firebase_auth: ^5.6.0
   cloud_firestore: ^5.6.9
   google_sign_in: ^6.1.4
+  image_picker: ^1.1.2
 
 
 #-----------/PACKAGES END---------#

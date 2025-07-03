@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hamrodokan/features/authentication/screens/home/widget/home_appbar.dart';
 import 'package:hamrodokan/features/authentication/screens/home/widget/promo_slider.dart';
-import 'package:hamrodokan/features/shop/all_products/all_products.dart';
 import 'package:hamrodokan/utils/constants/image_strings.dart';
 
 import 'package:hamrodokan/utils/constants/sizes.dart';
@@ -15,6 +14,7 @@ import '../../../../common/widgets/products/products_cart/product_card_vertical.
 import '../../../../common/widgets/texts/section_heading.dart';
 
 import '../../../authentication/screens/home/widget/home_categories.dart';
+import '../all_products/all_products.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

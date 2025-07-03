@@ -9,7 +9,7 @@ class TTexts{
   static const String onBoardingSUbTitle3 = "From our doorstep to yours - Swift, Secure and Contactless Delivery!";
 
   ///home
-  static const String homeAppBarTitle = "Good Morning!";
+  static const String homeAppBarTitle = "Enjoy shopping!";
   static const String homeAppBarSubTitle = "Happy Shopping";
 
   ///Login

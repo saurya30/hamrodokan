@@ -3,9 +3,10 @@ import 'package:hamrodokan/common/widgets/custom_shapes/containers/rounded_conta
 import 'package:hamrodokan/utils/constants/colors.dart';
 import 'package:hamrodokan/utils/constants/image_strings.dart';
 
-import '../../../../common/widgets/texts/section_heading.dart';
-import '../../../../utils/constants/sizes.dart';
-import '../../../../utils/helpers/helper_functions.dart';
+import '../../../../../common/widgets/texts/section_heading.dart';
+import '../../../../../utils/constants/sizes.dart';
+import '../../../../../utils/helpers/helper_functions.dart';
+
 
 class TBillingPaymentSection extends StatelessWidget {
   const TBillingPaymentSection({super.key});

@@ -4,6 +4,7 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:hamrodokan/data/repositories/user/user_repository.dart';
 import 'package:hamrodokan/features/authentication/screens/login/login.dart';
 import 'package:hamrodokan/features/authentication/screens/onboarding/onboarding.dart';
 import 'package:hamrodokan/features/authentication/screens/signup/verify_email.dart';
@@ -21,6 +22,9 @@ class AuthenticationRepository extends GetxController {
   final deviceStorage = GetStorage();
   final _auth = FirebaseAuth.instance;
 
+  ///get authenticated user data
+  User? get authUser => _auth.currentUser;
+
   ///called from main.dart on app launch
   @override
   void onReady() {
@@ -30,7 +34,7 @@ class AuthenticationRepository extends GetxController {
   }
 
   ///function to show relevant screen
-  screenRedirect() async {
+   void screenRedirect() async {
     final user = _auth.currentUser;
     if(user != null){
       if(user.emailVerified){
@@ -54,7 +58,7 @@ class AuthenticationRepository extends GetxController {
 
   ///========================EMAIL AND PASSWORD SIGN IN=====================
 
-  /// [EmailAuthentication]-Signin/Login
+  /// [EmailAuthentication]-Sign in/Login
   Future<UserCredential> loginWithEmailAndPassword(String email,
       String password) async {
     try {
@@ -127,6 +131,28 @@ class AuthenticationRepository extends GetxController {
   }
 
 
+  ///[ReAuthenticate] - Re authenticate user
+  Future<void> reAuthenticateWithEmailAndPassword(String email,String password) async{
+    try{
+      //create a credential
+      AuthCredential credential = EmailAuthProvider.credential(email: email, password: password);
+
+      //re-authenticate
+      await _auth.currentUser!.reauthenticateWithCredential(credential);
+    } on FirebaseAuthException catch (e) {
+      throw TFirebaseAuthException(e.code).message;
+    } on FirebaseException catch (e) {
+      throw TFirebaseException(e.code).message;
+    } on FormatException catch (_) {
+      throw const TFormatException();
+    } on PlatformException catch (e) {
+      throw TPlatformException(e.code).message;
+    } catch (e) {
+      throw 'Something went wrong.Please try again';
+    }
+  }
+
+
   ///[GoogleAuthentication]-Google
   Future<UserCredential?> signInWithGoogle() async {
     try {
@@ -144,7 +170,7 @@ class AuthenticationRepository extends GetxController {
         idToken: googleAuth?.idToken,
       );
 
-      //Sign in with Firebase using the credentials
+      ///Sign in with Firebase using the credentials
       return await _auth.signInWithCredential(credentials);
     } on FirebaseAuthException catch (e) {
       throw TFirebaseAuthException(e.code).message;
@@ -167,6 +193,24 @@ class AuthenticationRepository extends GetxController {
       await FirebaseAuth.instance.signOut();
       Get.offAll(()=>LoginScreen());
     } on FirebaseAuthException catch (e) {
+      throw TFirebaseAuthException(e.code).message;
+    } on FirebaseException catch (e) {
+      throw TFirebaseException(e.code).message;
+    } on FormatException catch (_) {
+      throw const TFormatException();
+    } on PlatformException catch (e) {
+      throw TPlatformException(e.code).message;
+    } catch (e) {
+      throw 'Something went wrong.Please try again';
+    }
+  }
+
+  ///delete user- remove user auth and firestore account
+  Future<void> deleteAccount() async{
+    try{
+      await UserRepository.instance.removeUserRecord(_auth.currentUser!.uid);
+      await _auth.currentUser?.delete();
+    }on FirebaseAuthException catch (e) {
       throw TFirebaseAuthException(e.code).message;
     } on FirebaseException catch (e) {
       throw TFirebaseException(e.code).message;
